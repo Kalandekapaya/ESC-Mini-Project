@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Mini - Project - QN 7 </title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i><img src="icons/User.svg" alt="teacher"></i>
+            <span class="logo_name">Teacher's Dashboard</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="icon-links">
+                    <a href="#">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="links_name"> Attendance</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="TakeAttend.html">Take Attendance</a></li>
+                    <li><a href="ClassAttend.html">Class Attendance</a></li>
+                    <li><a href="StudentAttend.html">Student Attendance</a></li>
+                    <li><a href="TodaysReport.html">Today's Report(xls)</a></li>
+                </ul>
+            </li>
+
+
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-user'></i>
+                        <span class="links_name">Student</span>
+                </div>
+            </li>
+
+            <div class="icon-link">
+                <li class="log_out">
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links_name">Log out</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <a href="TeacherDash.html">
+                    <span class="dashboard">Dashboard</span>
+                </a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <span class="admin_name">Teacher </span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+
+
+    </section>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;
+                console.log(arrowParent);
+                arrowParent.classList.toggle("showMenu")
+            });
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
