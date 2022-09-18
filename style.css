@@ -426,6 +426,27 @@ nav .profile-details i {
   background: #0d3073;
 }
 
+.sales-boxes p {
+  color: #2697FF;
+  min-width: 50px;
+  padding: 6px 6px 10px 30px;
+
+}
+
+.sales-boxes .RtAG {
+  color: #f83f37;
+  text-align: right;
+  min-width: 50px;
+  padding: 10px 6px 6px 50px;
+  font-size: smaller;
+}
+
+
+.flag {
+  display: flex;
+}
+
+
 /* Right box */
 .home-content .sales-boxes .top-sales {
   width: 35%;
@@ -463,6 +484,11 @@ nav .profile-details i {
   font-size: 17px;
   font-weight: 400;
   color: #333;
+}
+
+.table-responsive div H1 {
+  padding: 1px 1px 1px 20px;
+  color: #0d3073;
 }
 
 /* Responsive Media Query */
@@ -602,7 +628,7 @@ nav .profile-details i {
 .table th {
   border-top: 1px solid #eaecec;
   vertical-align: middle;
-  padding: .75rem 1.25rem;
+  padding: 0.25rem 2.25rem;
   border-radius: 5px;
 }
 
@@ -610,7 +636,7 @@ nav .profile-details i {
 .table.table-bordered {
   border: none;
   width: 65%;
-  background: #fff;
+  background: #cce5ff;
   padding: 20px 30px;
   margin: 0 20px;
   border-radius: 12px;
@@ -671,6 +697,57 @@ nav .profile-details i {
     white-space: nowrap;
   }
 }
+
+/*Table Checkbox*/
+.Cyan {
+  border-radius: 4px;
+  padding: 5px 2px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+.circle {
+  margin-left: 42px;
+  margin-top: 7px;
+  border-radius: 50%;
+  position: relative;
+  transform: translate(-1000%, -50%);
+  transition: .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #ff6262;
+  transition: .5s;
+  transition-delay: .5s;
+  border-radius: 50%;
+}
+
+input:checked~.circle {
+  transform: translate(-53%, -50%) rotate(180deg);
+}
+
+input:checked~.circle::before {
+  background: #6fff57;
+}
+
 
 /*Badge*/
 .badge {
